@@ -20,7 +20,9 @@ import java.util.Scanner;
  */
 public class HfxDonairExpress {
 
-      public static void main(String[] args) {
+    static Double[][] basePrices = {{5.00, 6.00, 7.00}, {8.00, 9.00, 10.00}};
+
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int type;
         int size;
@@ -41,22 +43,10 @@ public class HfxDonairExpress {
         // Process depending on the type
         switch (type) {
             case 0: // Donair
-                if (size == 0) {
-                    price = 5.00;
-                } else if (size == 1) {
-                    price = 6.00;
-                } else {
-                    price = 7.00;
-                }
+                price = basePrices[0][size];
 
             case 1: // Pizza
-                if (size == 0) {
-                    price = 8.00;
-                } else if (size == 1) {
-                    price = 9.00;
-                } else {
-                    price = 10.00;
-                }
+                price = basePrices[1][size];
 
                 break;
 
