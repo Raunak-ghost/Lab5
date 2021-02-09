@@ -80,7 +80,7 @@ public class HfxDonairExpress {
         coupon = in.nextDouble();
 
         // Calculate the final price
-        price = price - price*coupon/100;
+        price = price - coupon/100;
 
 
         // Show the final price
