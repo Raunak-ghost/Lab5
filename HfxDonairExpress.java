@@ -28,6 +28,7 @@ public class HfxDonairExpress {
         int type;
         int size;
         ArrayList<String> toppings;
+        Double coupon;
         Double price = 0.00;
 
         System.out.println("Welcome to HfxDonairExpress! What would you like (0 for Donair, 1 for Pizza)?");
@@ -71,6 +72,14 @@ public class HfxDonairExpress {
             default:
                 System.out.println("Invalid food choice");
         }
+
+        // Ask for a coupon
+        System.out.println("Enter your % discount (0-100)");
+        coupon = in.nextDouble();
+
+        // Calculate the final price
+        price = price - price*coupon/100;
+
 
         // Show the final price
         System.out.println("Your order comes to $" + String.format("%.2f", price));
