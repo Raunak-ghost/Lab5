@@ -47,6 +47,8 @@ public class HfxDonairExpress {
             case 0: // Donair
                 price = basePrices[0][size];
 
+                break;
+
             case 1: // Pizza
                 price = basePrices[1][size];
 
