@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * This program is used by HfxDonairExpress to take their online orders. Their menu is as follows
@@ -26,6 +27,7 @@ public class HfxDonairExpress {
         Scanner in = new Scanner(System.in);
         int type;
         int size;
+        ArrayList<String> toppings;
         Double price = 0.00;
 
         System.out.println("Welcome to HfxDonairExpress! What would you like (0 for Donair, 1 for Pizza)?");
@@ -47,6 +49,22 @@ public class HfxDonairExpress {
 
             case 1: // Pizza
                 price = basePrices[1][size];
+
+                // Get toppings
+                String topping;
+                System.out.println("Please enter your toppings (one per line, ENTER to confirm)");
+                do {
+                    topping = in.nextLine();
+
+                    if (topping == "pepperoni") {
+                        price = 1.00;
+                    } else if (topping == "jalapeno") {
+                        price = 0.99;
+                    } else if (topping == "mushroom") {
+                        price = 0.75;
+                    }
+
+                } while (!topping.equals(""));
 
                 break;
 
