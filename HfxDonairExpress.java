@@ -59,12 +59,12 @@ public class HfxDonairExpress {
                 do {
                     topping = in.nextLine();
 
-                    if (topping == "pepperoni") {
-                        price = 1.00;
-                    } else if (topping == "jalapeno") {
-                        price = 0.99;
-                    } else if (topping == "mushroom") {
-                        price = 0.75;
+                    if (topping.equals("pepperoni")) {
+                        price =price + 1.00;
+                    } else if (topping.equals("jalapeno")) {
+                        price =price + 0.99;
+                    } else if (topping.equals("mushroom")) {
+                        price =price+ 0.75;
                     }
 
                 } while (!topping.equals(""));
